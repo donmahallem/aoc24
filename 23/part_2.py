@@ -59,9 +59,7 @@ def findLongest(connections, interconnected):
                 interconnected[connecting] += (to_check,)
                 break
             else:
-                interconnected[connecting] = sorted(
-                    interconnected[connecting], reverse=True
-                )
+                interconnected[connecting] = interconnected[connecting]
                 connecting += 1
                 break
     return interconnected
